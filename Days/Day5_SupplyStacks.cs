@@ -19,7 +19,7 @@
         Model3001,
     }
 
-    internal class Day5_SupplyStacks
+    internal class Day5_SupplyStacks : IAoCTask
     {
         public static string SolvePart1(string inputFilePath)
         {

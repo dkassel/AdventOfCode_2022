@@ -18,7 +18,7 @@
 
     }
 
-    internal class Day3_RucksackReorganization
+    internal class Day3_RucksackReorganization : IAoCTask
     {
 
         private static Backpack StringToBackpack(string backpackContent) => new(backpackContent[..(backpackContent.Length / 2)], backpackContent[(backpackContent.Length / 2)..]);

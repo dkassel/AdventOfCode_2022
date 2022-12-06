@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode_2022.Days
 {
-    internal class Day1_CalorieCounting
+    internal class Day1_CalorieCounting : IAoCTask
     {
 
         private static List<int> GetCalorieSumsOfAllElfs(List<string> input)
