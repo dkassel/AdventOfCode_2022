@@ -18,7 +18,7 @@
 
     }
 
-    internal class Day3
+    internal class Day3_RucksackReorganization
     {
 
         private static Backpack StringToBackpack(string backpackContent) => new(backpackContent[..(backpackContent.Length / 2)], backpackContent[(backpackContent.Length / 2)..]);

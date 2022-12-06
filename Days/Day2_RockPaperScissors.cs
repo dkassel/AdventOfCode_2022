@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode_2022.Days
 {
-    internal class Day2
+    internal class Day2_RockPaperScissors
     {
         private static readonly int RockScore = 1;
         private static readonly int PaperScore = 2;
