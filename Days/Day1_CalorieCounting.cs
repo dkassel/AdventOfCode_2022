@@ -1,18 +1,13 @@
-﻿namespace AdventOfCode_2022.Days
-{
-    internal class Day1_CalorieCounting : IAoCTask
-    {
+﻿namespace AdventOfCode_2022.Days {
+    internal class Day1_CalorieCounting : IAoCTask {
 
-        private static List<int> GetCalorieSumsOfAllElfs(List<string> input)
-        {
+        private static List<int> GetCalorieSumsOfAllElfs(List<string> input) {
             List<int> calorieSums = new();
             int currentCalory = 0;
-            foreach (string line in input)
-            {
+            foreach (string line in input) {
                 if (int.TryParse(line, out int calory))
                     currentCalory += calory;
-                else
-                {
+                else {
                     calorieSums.Add(currentCalory);
                     currentCalory = 0;
                 }
@@ -21,14 +16,12 @@
             return calorieSums;
         }
 
-        public static string SolvePart1(string inputFilePath)
-        {
+        public static string SolvePart1(string inputFilePath) {
             List<int> caloryList = GetCalorieSumsOfAllElfs(System.IO.File.ReadLines(inputFilePath).ToList());
             return $"Max calories of one elf are {caloryList.Max()}";
         }
 
-        public static string SolvePart2(string inputFilePath)
-        {
+        public static string SolvePart2(string inputFilePath) {
             List<int> caloryList = GetCalorieSumsOfAllElfs(System.IO.File.ReadLines(inputFilePath).ToList());
             caloryList = caloryList.OrderByDescending(i => i).ToList();
             var top3Calories = caloryList.Take(3);
